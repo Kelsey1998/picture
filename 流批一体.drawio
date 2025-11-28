@@ -1,0 +1,107 @@
+<mxfile host="app.diagrams.net" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36" version="29.2.1">
+  <diagram name="第 1 页" id="8yz_6_Px_5U8VjR5AUxJ">
+    <mxGraphModel dx="766" dy="503" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="BGezZVHZsrxpRIUKg6Oy-25" parent="1" style="whiteSpace=wrap;strokeWidth=2;verticalAlign=top;fontFamily=Comic Sans MS;" value="现代架构: TP/AP + 流批一体" vertex="1">
+          <mxGeometry height="1009" width="483" x="90" y="627" as="geometry" />
+        </mxCell>
+        <mxCell id="BGezZVHZsrxpRIUKg6Oy-26" parent="BGezZVHZsrxpRIUKg6Oy-25" style="shape=cylinder3;boundedLbl=1;backgroundOutline=1;size=10;strokeWidth=2;whiteSpace=wrap;fontFamily=Comic Sans MS;" value="TP系统&#xa;OLTP Database" vertex="1">
+          <mxGeometry height="100" width="120" x="73" y="46" as="geometry" />
+        </mxCell>
+        <mxCell id="BGezZVHZsrxpRIUKg6Oy-27" parent="BGezZVHZsrxpRIUKg6Oy-25" style="whiteSpace=wrap;strokeWidth=2;fontFamily=Comic Sans MS;" value="Streaming&#xa;Processing Engine&#xa;e.g. Flink" vertex="1">
+          <mxGeometry height="102" width="186" x="153" y="244" as="geometry" />
+        </mxCell>
+        <mxCell id="BGezZVHZsrxpRIUKg6Oy-28" parent="BGezZVHZsrxpRIUKg6Oy-25" style="whiteSpace=wrap;strokeWidth=2;fontFamily=Comic Sans MS;" value="App Logs" vertex="1">
+          <mxGeometry height="54" width="123" x="303" y="68" as="geometry" />
+        </mxCell>
+        <mxCell id="BGezZVHZsrxpRIUKg6Oy-29" parent="BGezZVHZsrxpRIUKg6Oy-25" style="shape=cylinder3;boundedLbl=1;backgroundOutline=1;size=10;strokeWidth=2;whiteSpace=wrap;fontFamily=Comic Sans MS;" value="ODS/Data Lake&#xa;Raw Data" vertex="1">
+          <mxGeometry height="100" width="123" x="185" y="421" as="geometry" />
+        </mxCell>
+        <mxCell id="BGezZVHZsrxpRIUKg6Oy-30" parent="BGezZVHZsrxpRIUKg6Oy-25" style="whiteSpace=wrap;strokeWidth=2;fontFamily=Comic Sans MS;" value="Stream Processing Engine" vertex="1">
+          <mxGeometry height="54" width="242" x="125" y="596" as="geometry" />
+        </mxCell>
+        <mxCell id="BGezZVHZsrxpRIUKg6Oy-31" parent="BGezZVHZsrxpRIUKg6Oy-25" style="shape=cylinder3;boundedLbl=1;backgroundOutline=1;size=10;strokeWidth=2;whiteSpace=wrap;fontFamily=Comic Sans MS;" value="DWD/DWS&#xa;Data Warehouse" vertex="1">
+          <mxGeometry height="101" width="130" x="181" y="725" as="geometry" />
+        </mxCell>
+        <mxCell id="BGezZVHZsrxpRIUKg6Oy-32" parent="BGezZVHZsrxpRIUKg6Oy-25" style="whiteSpace=wrap;strokeWidth=2;fontFamily=Comic Sans MS;" value="Real-time BI&#xa;&amp;amp; Alerting" vertex="1">
+          <mxGeometry height="78" width="148" x="66" y="902" as="geometry" />
+        </mxCell>
+        <mxCell id="BGezZVHZsrxpRIUKg6Oy-33" parent="BGezZVHZsrxpRIUKg6Oy-25" style="whiteSpace=wrap;strokeWidth=2;fontFamily=Comic Sans MS;" value="Ad-hoc Analysis&#xa;&amp;amp; Batch Reports" vertex="1">
+          <mxGeometry height="78" width="175" x="264" y="902" as="geometry" />
+        </mxCell>
+        <mxCell id="BGezZVHZsrxpRIUKg6Oy-34" edge="1" parent="BGezZVHZsrxpRIUKg6Oy-25" source="BGezZVHZsrxpRIUKg6Oy-26" style="curved=1;startArrow=none;endArrow=block;exitX=0.5;exitY=0.99;entryX=0.19;entryY=0;rounded=0;fontFamily=Comic Sans MS;" target="BGezZVHZsrxpRIUKg6Oy-27" value="CDC Stream">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="134" y="195" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="BGezZVHZsrxpRIUKg6Oy-35" edge="1" parent="BGezZVHZsrxpRIUKg6Oy-25" source="BGezZVHZsrxpRIUKg6Oy-28" style="curved=1;startArrow=none;endArrow=block;exitX=0.5;exitY=1.01;entryX=0.82;entryY=0;rounded=0;fontFamily=Comic Sans MS;" target="BGezZVHZsrxpRIUKg6Oy-27" value="Real-time Stream">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="365" y="195" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="BGezZVHZsrxpRIUKg6Oy-36" edge="1" parent="BGezZVHZsrxpRIUKg6Oy-25" source="BGezZVHZsrxpRIUKg6Oy-27" style="curved=1;startArrow=none;endArrow=block;exitX=0.5;exitY=1;entryX=0.5;entryY=0;rounded=0;fontFamily=Comic Sans MS;" target="BGezZVHZsrxpRIUKg6Oy-29" value="">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="BGezZVHZsrxpRIUKg6Oy-37" edge="1" parent="BGezZVHZsrxpRIUKg6Oy-25" source="BGezZVHZsrxpRIUKg6Oy-29" style="curved=1;startArrow=none;endArrow=block;exitX=0.5;exitY=1;entryX=0.5;entryY=0.01;rounded=0;fontFamily=Comic Sans MS;" target="BGezZVHZsrxpRIUKg6Oy-30" value="">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="BGezZVHZsrxpRIUKg6Oy-38" edge="1" parent="BGezZVHZsrxpRIUKg6Oy-25" source="BGezZVHZsrxpRIUKg6Oy-30" style="curved=1;startArrow=none;endArrow=block;exitX=0.5;exitY=1.01;entryX=0.5;entryY=0;rounded=0;fontFamily=Comic Sans MS;" target="BGezZVHZsrxpRIUKg6Oy-31" value="">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="BGezZVHZsrxpRIUKg6Oy-39" edge="1" parent="BGezZVHZsrxpRIUKg6Oy-25" source="BGezZVHZsrxpRIUKg6Oy-31" style="curved=1;startArrow=none;endArrow=block;exitX=0.03;exitY=1.01;entryX=0.5;entryY=0;rounded=0;fontFamily=Comic Sans MS;" target="BGezZVHZsrxpRIUKg6Oy-32" value="">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="140" y="864" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="BGezZVHZsrxpRIUKg6Oy-40" edge="1" parent="BGezZVHZsrxpRIUKg6Oy-25" source="BGezZVHZsrxpRIUKg6Oy-31" style="curved=1;startArrow=none;endArrow=block;exitX=0.97;exitY=1.01;entryX=0.5;entryY=0;rounded=0;fontFamily=Comic Sans MS;" target="BGezZVHZsrxpRIUKg6Oy-33" value="">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="352" y="864" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="BGezZVHZsrxpRIUKg6Oy-41" parent="1" style="whiteSpace=wrap;strokeWidth=2;verticalAlign=top;fontFamily=Comic Sans MS;" value="传统架构: TP/AP 分离" vertex="1">
+          <mxGeometry height="533" width="242" x="211" y="20" as="geometry" />
+        </mxCell>
+        <mxCell id="BGezZVHZsrxpRIUKg6Oy-42" parent="BGezZVHZsrxpRIUKg6Oy-41" style="shape=cylinder3;boundedLbl=1;backgroundOutline=1;size=10;strokeWidth=2;whiteSpace=wrap;fontFamily=Comic Sans MS;" value="TP系统&#xa;OLTP Database" vertex="1">
+          <mxGeometry height="100" width="120" x="69" y="46" as="geometry" />
+        </mxCell>
+        <mxCell id="BGezZVHZsrxpRIUKg6Oy-43" parent="BGezZVHZsrxpRIUKg6Oy-41" style="shape=cylinder3;boundedLbl=1;backgroundOutline=1;size=10;strokeWidth=2;whiteSpace=wrap;fontFamily=Comic Sans MS;" value="AP系统&#xa;OLAP Data Warehouse" vertex="1">
+          <mxGeometry height="106" width="172" x="43" y="244" as="geometry" />
+        </mxCell>
+        <mxCell id="BGezZVHZsrxpRIUKg6Oy-44" parent="BGezZVHZsrxpRIUKg6Oy-41" style="whiteSpace=wrap;strokeWidth=2;fontFamily=Comic Sans MS;" value="Batch Reports&#xa;T+1 Insights" vertex="1">
+          <mxGeometry height="78" width="159" x="49" y="426" as="geometry" />
+        </mxCell>
+        <mxCell id="BGezZVHZsrxpRIUKg6Oy-45" edge="1" parent="BGezZVHZsrxpRIUKg6Oy-41" source="BGezZVHZsrxpRIUKg6Oy-42" style="curved=1;startArrow=none;endArrow=block;exitX=0.5;exitY=0.99;entryX=0.5;entryY=0;rounded=0;fontFamily=Comic Sans MS;" target="BGezZVHZsrxpRIUKg6Oy-43" value="Batch ETL">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="BGezZVHZsrxpRIUKg6Oy-46" edge="1" parent="BGezZVHZsrxpRIUKg6Oy-41" source="BGezZVHZsrxpRIUKg6Oy-43" style="curved=1;startArrow=none;endArrow=block;exitX=0.5;exitY=1.01;entryX=0.5;entryY=0;rounded=0;fontFamily=Comic Sans MS;" target="BGezZVHZsrxpRIUKg6Oy-44" value="">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="BGezZVHZsrxpRIUKg6Oy-47" edge="1" parent="1" source="BGezZVHZsrxpRIUKg6Oy-41" style="curved=1;startArrow=none;endArrow=block;exitX=0.5;exitY=1;entryX=0.5;entryY=0;rounded=0;fontFamily=Comic Sans MS;" target="BGezZVHZsrxpRIUKg6Oy-25" value="Evolution">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points" />
+          </mxGeometry>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
